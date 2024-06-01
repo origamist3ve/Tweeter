@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweeter</title>
+    <link rel="stylesheet" href="/static/xstyles.css">
+
+
+</head>
+
+<body class="body">
+    <div class="navbar">
+        <a href="/">Home</a>
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Menu &#9660;
+
+          </button>
+
+          <div class="dropdown-content">
+            <a href="/static/xsignUp.html">Sign up</a>
+            <a href="/static/xlogin.html">Login</a>
+            <a href="/static/xpost.html">Post</a>
+            <a href="/profile/{{ username }}">Profile</a>
+          </div>
+        </div>
+        <div class="logo">Tweeter</div>
+      </div>
+      <div id="divResults">
+
+      </div><br>
+      <div id="divReplies"></div>
+
+
+
+      <!--<div id="showReplies" style="display: none;">-->
+      <!--    <div id="divReplies"> </div>-->
+      <!--</div>-->
+
+      <script src="/static/xscript.js"></script>
+      <script>list_posts();</script>
+
+
+</body>
+</html>

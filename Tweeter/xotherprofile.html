@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/xstyles.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src = "/static/xscript.js"></script>
+
+        <title>{{ username }}'s Account</title>
+    </head>
+
+    <body class="body">
+        <div class="navbar">
+        <a href="/">Home</a>
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Menu &#9660;
+
+          </button>
+
+          <div class="dropdown-content">
+            <a href="/static/xsignUp.html">Sign up</a>
+            <a href="/static/xlogin.html">Login</a>
+            <a href="/static/xpost.html">Post</a>
+
+          </div>
+        </div>
+        <div class="logo">Tweeter</div>
+      </div>
+
+        <h1 style="color:white" > {{ username }}'s page</h1>
+        <img src="{{ photo }}">
+
+        <input type="hidden" id="uid" value="{{ uid }}">
+
+        <!--<h1> {{ uid }} </h1>-->
+
+
+
+        <div id="divResults"></div>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            list_users_posts('{{ uid }}');
+        </script>
+        <script>
+            var loggedIn = "{{ username }}";
+        </script>
+    </body>
+</html>

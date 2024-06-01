@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replies</title>
+    <link rel="stylesheet" href="/static/xstyles.css">
+
+    <script src="/static/xscript.js"></script>
+
+</head>
+
+
+<body class="body">
+
+    <div class="navbar">
+        <a href="/">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Menu &#9660;
+          </button>
+          <div class="dropdown-content">
+            <a href="/static/xsignUp.html">Sign up</a>
+            <a href="/static/xlogin.html">Login</a>
+            <a href="/static/xpost.html">Post</a>
+
+          </div>
+        </div>
+        <div class="logo">Tweeter</div>
+      </div>
+
+    <div class="post_container">
+    {{ username }} <br>
+    {{ date }} <br>
+    {{ text }} <br>
+
+    </div>
+
+<hr>
+<h2 style="color:white">Replies: </h2>
+    <div id="divResults"></div>
+
+    <input type="hidden" id="parent_pid" value="{{ pid }}">
+
+    <!-- reply box and button here -->
+<hr>
+    <div class="poster">
+
+        Reply: <br> <input type="text" id="text"><br><br>
+        <button class="button" onclick="post_reply()">reply</button> <br>
+    </div>
+
+
+    <script>
+        list_replies('{{ pid }}');
+    </script>
+
+
+</body>
+</html>
